@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="no-js" ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>Angular Studies</title>
+
+    <link href='//fonts.googleapis.com/css?family=Raleway:400,500,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="./bower/bootstrap/dist/css/bootstrap.min.css">
+    <style type="text/css">
+      body {
+        font-family: 'Raleway', sans-serif;
+        font-weight: 500;
+      }
+      h2 {
+        font-weight: 400;
+      }
+      h4 {
+        font-weight: 700;
+      }
+    </style>
+
+    <script src="./bower/angular/angular.min.js"></script>
+    <script>
+      var app = angular.module('app', []);
+      var _studies = [
+        {
+          url: './hello',
+          title: 'Hello',
+          desc: 'Hello world with angular'
+        },
+        {
+          url: './todo',
+          title: 'Todo',
+          desc: 'Todo list with angular'
+        },
+        {
+          url: './search',
+          title: 'Search',
+          desc: 'Search json file with angular'
+        }
+      ];
+
+      app.controller('studiesController', ['$scope', '$http', function($scope, $http){
+        $scope.studies = _studies;
+      }]);
+    </script>
+  </head>
+  <body>
+
+    <main class="container">
+      <div class="col-md-6 col-md-offset-3" ng-controller="studiesController">
+        <header class="page-header">
+          <h2>My AngularJS Studies</h2>
+        </header>
+        <div ng-show="studies.length > 0">
+          <div class="list-group">
+            <a href="{{ study.url }}" class="list-group-item" ng-repeat="study in studies">
+              <h4 class="list-group-item-heading">{{ study.title }}</h4>
+              <p class="list-group-item-text"><em>{{ study.desc }}</em></p>
+            </a>
+          </div>
+        </div>
+        <footer class="text-center">
+          <hr>
+          <p class="text-muted"><small>by <a href="http://nandomoreira.me/">nandomoreira.me</a></small></p>
+        </footer>
+      </div>
+    </main>
+
+  </body>
+</html><!-- by nandomoreira.me -->

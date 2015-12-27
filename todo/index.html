@@ -26,10 +26,10 @@
 
           <form ng-submit="todoList.addTodo()" class="well">
             <div class="input-group">
-              <input type="text" ng-model="todoList.todoText" class="form-control" size="30"
-              placeholder="add new todo here">
+              <input type="text" ng-model="todoList.todoText" class="form-control input-lg" size="30"
+              placeholder="add new todo here" autofocus autocomplete="off">
               <span class="input-group-btn">
-                <button type="submit" class="btn btn-primary">Add</button>
+                <button type="submit" class="btn btn-primary btn-lg">Add</button>
               </span>
             </div>
           </form>
@@ -49,6 +49,11 @@
           </ul>
 
         </div>
+
+        <footer class="text-center">
+          <hr>
+          <p class="text-muted"><small>by <a href="http://nandomoreira.me/">nandomoreira.me</a></small></p>
+        </footer>
       </div>
     </div>
 

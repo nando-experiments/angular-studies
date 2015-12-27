@@ -14,11 +14,15 @@
     <div class="container">
       <div class="col-md-6 col-md-offset-3">
         <div class="well">
-          <label>Name:</label>
-          <input type="text" ng-model="yourName" class="form-control" placeholder="Enter a name here">
+          <input type="text" ng-model="yourName" class="form-control input-lg" placeholder="Enter a name here" autofocus autocomplete="off">
           <hr>
-          <h1>Hello {{yourName}}!</h1>
+          <h2>Hello {{ yourName }}!</h2>
         </div>
+
+        <footer class="text-center">
+          <hr>
+          <p class="text-muted"><small>by <a href="http://nandomoreira.me/">nandomoreira.me</a></small></p>
+        </footer>
       </div>
     </div>
 
