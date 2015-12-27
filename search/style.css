@@ -1,0 +1,39 @@
+body {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+}
+
+a,
+a:hover,
+a:focus,
+a:active {
+  color: #e97f02;
+  opacity: .7;
+}
+
+a:hover,
+a:focus,
+a:active {
+  opacity: 1;
+}
+
+.page-header h3 {
+  text-transform: lowercase;
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+.well {
+  position: relative;
+}
+
+.well .glyphicon {
+  position: absolute;
+  top: 35px;
+  left: 35px;
+  color: #777;
+}
+
+.form-control {
+  padding-left: 40px;
+}
