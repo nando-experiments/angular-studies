@@ -1,7 +1,7 @@
 
 var app = angular.module('searchApp', []);
 
-app.controller('searchController', function($scope, $http){
+app.controller('searchController', ['$scope', '$http', function($scope, $http){
   $scope.pesquisar = function(q) {
     if (q != "" && q != undefined && q.length >= 1) {
       $http.get('http://nandomoreira.me/search.json', { "data" : q }).success(function(data) {
@@ -13,4 +13,4 @@ app.controller('searchController', function($scope, $http){
       $scope.posts = [];
     }
   };
-});
+}]);
